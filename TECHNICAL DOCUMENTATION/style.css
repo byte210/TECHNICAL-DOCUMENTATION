@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+html{
+    scroll-behavior: smooth;
+  }
+
+body{
+    background-color: whitesmoke;
+    color: #333333;
+    font-size: 20px;
+    line-height: 1.5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* STYLIZACJA FONTÓW */
+header{
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+h2{
+    font-size: 1.2em;
+}
+
+p{
+    font-size: 0.8em;
+}
+
+code{
+    padding: 10px 5px;
+    background-color: rgb(197, 196, 196);
+    font-size: 0.8em;
+}
+
+ul{
+    font-size: 0.8em;
+}
+
+/* POCZĄTEK STYLIZACJI NAVBARA */
+nav{
+    display: block;
+}
+nav header{
+    padding-left: 10px;
+}
+nav ul li{
+    list-style-type: none;
+    position: relative;
+    margin-right: 40px;
+    padding: 10px;
+    border-top: 1px solid #333333;
+}
+nav ul li:last-child{
+    border-bottom: 1px solid #333333;
+}
+
+.nav-link{
+    display: block;
+    text-decoration: none;
+    color: #333333;
+}
+/* Minimalna szerokość navbara ma wynosić 290px; jego pozycja ma być stała i niezależna od innych elementów na stronie i zawsze ma obejmować 100% wysokości danej strony */
+#navbar{
+    position: fixed;
+    min-width: 290px;
+    top: 0px;
+    left: 0px;
+    width: 300px;
+    height: 100%;
+    border-right: solid;
+    border-color: #333333;
+}
+
+/* Przy maksymalnej szerokości wynoszącej 815px zaaplikuj pozycję absolutną navbara względem body i maksymalną wysokość 275px */
+@media only screen and (max-width: 815px){ 
+    #navbar{
+        background-color: whitesmoke;
+        position: absolute;
+        top: 0;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-height: 275px;
+        z-index: 1;
+        border-bottom: 2px solid;
+    }
+}
+
+/* KONIEC STYLIZACJI NAVBARA */
+
+/* POCZĄTEK STYLIZACJI MAINA */
+main{
+    display: block;
+}
+
+main header{
+    font-size: 1.5em;
+}
+
+/* stała pozycja main-doca ma być określona wymiarami - 310px od krawędzi lewej (tę pozycję zajmuje navbar) Dzięki temu navbar nie zakrywa żadnych treści i jest stale widoczny na ekranie */
+#main-doc{
+    position: absolute;
+    margin-left: 310px;
+    padding: 20px;
+    margin-bottom: 110px;
+}
+
+@media only screen and (max-width: 815px){
+    #main-doc{
+        position: relative;
+        margin-left: 0px;
+        margin-top: 270px;
+    }
+}
+
+/* KONIEC STYLIZACJI MAINA */
